@@ -1,0 +1,10 @@
+依赖的第三方库：
+jieba (0.39)
+MySQL-python(1.2.5)
+numpy(1.13.3+mkl)
+pandas(0.22.0)
+scikit-learn(0.19.1)
+scipy (1.0.1)
+sklearn
+
+运行Analysis_main.py启动文本数据分析

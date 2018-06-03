@@ -1,4 +1,3 @@
-
 # -*- coding: utf-8 -*-
 """
 Created on Mon May 28 12:18:56 2018
@@ -7,7 +6,6 @@ Created on Mon May 28 12:18:56 2018
 """
 
 import torch
-import numpy as np
 from torch.autograd import Variable
 import torch.nn.functional as F
 import matplotlib.pyplot as plt
@@ -20,10 +18,11 @@ y1 = torch.ones(100)
 x = torch.cat((x0, x1), 0).type(torch.FloatTensor)
 y = torch.cat((y0, y1),).type(torch.LongTensor)
 
-x,y = Variable(x), Variable(y)
+x, y = Variable(x), Variable(y)
 
 # plt.scatter(x.data.numpy()[:, 0], x.data.numpy()[:, 1], c=y.data.numpy(), s=100, lw=0, cmap='RdYlGn')
 # plt.show()
+
 
 class Net(torch.nn.Module):
     def __init__(self, n_feature, n_hidden, n_output):
@@ -61,6 +60,6 @@ for t in range(400):
         accuracy = sum(pred_y == target_y)/200.
         plt.text(1.5, -4, 'Accuracy=%.2f' % accuracy, fontdict={'size': 20, 'color':  'red'})
         plt.show()
-        plt.pause(0.5)
+        plt.pause(1)
 
 plt.ioff()

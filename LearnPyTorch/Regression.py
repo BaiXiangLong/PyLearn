@@ -14,7 +14,7 @@ x = torch.unsqueeze(torch.linspace(-np.pi, np.pi, 400), dim=1)
 # y = x.pow(2) + x.pow(3) + 0.1*torch.rand(x.size())
 y = x.pow(2) + x.pow(3)
 
-x,y = Variable(x), Variable(y)
+x, y = Variable(x), Variable(y)
 
 plt.scatter(x.data.numpy(), y.data.numpy())
 plt.show()
